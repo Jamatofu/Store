@@ -1,5 +1,5 @@
 @import '../node_modules/bootstrap/dist/css/bootstrap-theme.min.css';
 
 body {
-  background-color: #2dcb13;
+  background-color: #2dcb13 !important;
 }
