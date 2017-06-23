@@ -13,6 +13,8 @@ export class BandeauCookieComponent implements OnInit {
   ngOnInit() {
   }
 
+  // TODO Faire en sorte qu'on crée un cookie
+
   public fermerBandeau() {
     this.isOk = !this.isOk;
   }
