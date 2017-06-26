@@ -1,1 +1,4 @@
-<app-product [productModel]="productModel"></app-product>
+<div class="card-deck">
+
+  <app-product *ngFor="let product of productModel" [productModel]="product"></app-product>
+</div>

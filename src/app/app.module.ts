@@ -10,6 +10,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { ProduitListComponent } from './product/produit-list/produit-list.component';
 import { AccueilComponent } from './accueil/accueil.component';
 import { ProductComponent } from './product/product/product.component';
+import {ModalModule} from "ngx-bootstrap";
+import { PanierComponent } from './panier/panier.component';
 
 const appRoutes: Routes = [
   { path: 'accueil', component: AccueilComponent },
@@ -27,11 +29,13 @@ const appRoutes: Routes = [
     PageNotFoundComponent,
     ProduitListComponent,
     AccueilComponent,
-    ProductComponent
+    ProductComponent,
+    PanierComponent
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    ModalModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

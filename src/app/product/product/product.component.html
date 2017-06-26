@@ -1,6 +1,35 @@
-<div id="product" class="text-center">
-  <img src="#" class="img" />
-  <p>{{ productModel._name }}</p>
-  <p><b>Prix : </b> {{ productModel._price }} </p>
-  <p>Quantité : <input type="number" value="0"/></p>
+<div class="card border-card" id="product">
+  <img [src]="productModel._urlImage" class="card-img img-fluid" (click)="staticModal.show()"/>
+
+  <div class="modal fade" bsModal #staticModal="bs-modal" [config]="{backdrop: 'true'}"
+       tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-body">
+          <img [src]="productModel._urlImage" class="card-img img-fluid"/>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-block ">
+    <h2 class="text-center">{{ productModel._name }}</h2>
+    <p><b>Prix : </b> {{ productModel._price }} €</p>
+
+    <form>
+      <div class="form-group row">
+        <label for="quantity" class="col-form-label col-sm-3">Quantité : </label>
+        <div class="col-sm-9">
+          <input type="number" id="quantity" class="form-control" value="0"/>
+        </div>
+      </div>
+
+      <div class="text-center col-sm-12 pb-3">
+        <button type="submit" class="btn btn-primary btn-lg ">Je commande</button>
+      </div>
+    </form>
+
+
+
+  </div>
 </div>

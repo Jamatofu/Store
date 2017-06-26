@@ -7,13 +7,13 @@ import {ProductModel} from "../../../shared/model/ProductModel";
   styleUrls: ['./produit-list.component.css']
 })
 export class ProduitListComponent implements OnInit {
-  public productModel: ProductModel;
+  public productModel: ProductModel[] =[];
 
   constructor() { }
 
   ngOnInit() {
-    this.productModel = new ProductModel("LOL", 34);
-    console.log(this.productModel._name + " || " + this.productModel._price);
+    this.productModel.push(new ProductModel("Plante verte", 34 ,"http://mosthdwallpapers.com/wp-content/uploads/2016/04/Green-Rose-Full-HD-1080p-Wallpaper.jpg"));
+    this.productModel.push(new ProductModel("Plante verte", 34 ,"http://mosthdwallpapers.com/wp-content/uploads/2016/04/Green-Rose-Full-HD-1080p-Wallpaper.jpg"));
   }
 
 }
