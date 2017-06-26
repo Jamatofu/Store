@@ -12,6 +12,7 @@ import { AccueilComponent } from './accueil/accueil.component';
 import { ProductComponent } from './product/product/product.component';
 import {ModalModule} from "ngx-bootstrap";
 import { PanierComponent } from './panier/panier.component';
+import {PanierService} from "../shared/service/panier/panier.service";
 
 const appRoutes: Routes = [
   { path: 'accueil', component: AccueilComponent },
@@ -37,7 +38,7 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes),
     ModalModule.forRoot()
   ],
-  providers: [],
+  providers: [PanierService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

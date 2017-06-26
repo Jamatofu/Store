@@ -1,5 +1,5 @@
 <div class="card border-card" id="product">
-  <img [src]="productModel._urlImage" class="card-img img-fluid" (click)="staticModal.show()"/>
+  <img [src]="productModel._urlImage" class="card-img img" (click)="staticModal.show()"/>
 
   <div class="modal fade" bsModal #staticModal="bs-modal" [config]="{backdrop: 'true'}"
        tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
@@ -20,12 +20,12 @@
       <div class="form-group row">
         <label for="quantity" class="col-form-label col-sm-3">Quantité : </label>
         <div class="col-sm-9">
-          <input type="number" id="quantity" class="form-control" value="0"/>
+          <input type="number" id="quantity" class="form-control" min="0" value="1" #quantity/>
         </div>
       </div>
 
       <div class="text-center col-sm-12 pb-3">
-        <button type="submit" class="btn btn-primary btn-lg ">Je commande</button>
+        <button type="button" class="btn btn-primary btn-lg" (click)="addToShop(quantity.value)">Je commande</button>
       </div>
     </form>
 

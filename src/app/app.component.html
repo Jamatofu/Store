@@ -1,10 +1,20 @@
 
 
-<div class="container">
-  <app-navbar></app-navbar>
-  <div class="contenu p-3">
-    <router-outlet></router-outlet>
+<div class="container-fluid">
+  <div class="row text-center">
+    <app-navbar></app-navbar>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-11 p-3">
+      <router-outlet></router-outlet>
+    </div>
+
+    <div class="col-lg-1">
+      <app-panier></app-panier>
+    </div>
   </div>
 </div>
+
 
 <app-bandeau-cookie></app-bandeau-cookie>
